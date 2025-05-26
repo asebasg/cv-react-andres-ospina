@@ -1,19 +1,34 @@
+import "./Experiencia.css";
+
+const experiencia = {
+  apps: "Creador del aplicativos web y aplicaciones móviles",
+  tecnologias: "Creador de sistemas de software de prevención de riesgos",
+  asociaciones:
+    "Colaborador en proyectos de software y produccion de contenido",
+};
+
+const empresas = {
+  axomy: "Axomy Solutions & Co.",
+  amva: "Área Metropolitana del Valle de Aburrá",
+  alcgir: "Alcaldía de Girardota",
+};
+
 export default function Experiencia() {
   return (
     <section>
       <h3>Experiencia Profesional</h3>
       <ul>
         <li>
-          <strong>Desarrollador Full Stack</strong> - Navisoft Gaming (2022-2024)
+          <strong>{experiencia.apps}</strong> {empresas.axomy} -{" "}
+          <p class="fecha">(2022 - 2024)</p>
         </li>
         <li>
-          <strong>Instructor TIC</strong> - SENA (2020-2022)
+          <strong>{experiencia.tecnologias}</strong>
+          {empresas.amva} - <p class="fecha">(2024 - 2025)</p>
         </li>
         <li>
-            <strong>Creador del aplicativos web y aplicaciones móviles</strong> - Axomy Solutions & Co. (2022 - 2024)
-        </li>
-        <li>
-            <strong>Creador de sistemas de software de prevención de riesgos</strong> - Área Metropolitana del Valle de Aburrá (2024 - 2025)
+          <strong>{experiencia.asociaciones}</strong>
+          {empresas.alcgir} - <p class="fecha">(2025)</p>
         </li>
       </ul>
     </section>
