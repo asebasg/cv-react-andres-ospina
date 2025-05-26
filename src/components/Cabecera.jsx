@@ -14,6 +14,7 @@ export default function CabeceraCV() {
       <h1>{user.nombre}</h1>
       <h2>{user.cargo}</h2>
       <h4>Datos de contacto:</h4>
+      <div class="contacto">
       <p>
         <strong>Teléfono</strong>: {user.telefono}
       </p>
@@ -23,6 +24,8 @@ export default function CabeceraCV() {
       <p>
         <strong>Ciudad</strong>: {user.ciudad}
       </p>
+      </div>
+      
     </header>
   );
 }
