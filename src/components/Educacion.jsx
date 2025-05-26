@@ -20,16 +20,16 @@ export default function Educacion() {
       <h3>Educación</h3>
       <ul>
         <li>
-          <strong>{educacion.superior}</strong> - {instituciones.ucc} (2027-2029)
+          <strong>{educacion.superior}</strong> -  <p class="info-adicional">{instituciones.ucc} (2027-2029)</p>
         </li>
         <li>
-            <strong>{educacion.tecnologia}</strong> - {instituciones.sena} (2025-2026)
+            <strong>{educacion.tecnologia}</strong> -  <p class="info-adicional">{instituciones.sena} (2025-2026)</p>
         </li>
         <li>
-            <strong>{educacion.bachillerato}</strong> - {instituciones.ieag} (2022-2024)
+            <strong>{educacion.bachillerato}</strong> -  <p class="info-adicional">{instituciones.ieag} (2022-2024)</p>
         </li>
         <li>
-            <strong>{educacion.otros}</strong> - {instituciones.pg} (2024)
+            <strong>{educacion.otros}</strong> - <p class="info-adicional">{instituciones.pg} (2024)</p>
         </li>
       </ul>
     </section>
