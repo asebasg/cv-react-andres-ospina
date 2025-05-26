@@ -19,16 +19,15 @@ export default function Experiencia() {
       <h3>Experiencia Profesional</h3>
       <ul>
         <li>
-          <strong>{experiencia.apps}</strong> {empresas.axomy} -{" "}
-          <p class="fecha">(2022 - 2024)</p>
+          <strong>{experiencia.apps}</strong> - <p class="fecha">{empresas.axomy} (2022 - 2024)</p>
         </li>
         <li>
           <strong>{experiencia.tecnologias}</strong>
-          {empresas.amva} - <p class="fecha">(2024 - 2025)</p>
+           - <p class="fecha">{empresas.amva} (2024 - 2025)</p>
         </li>
         <li>
           <strong>{experiencia.asociaciones}</strong>
-          {empresas.alcgir} - <p class="fecha">(2025)</p>
+           - <p class="fecha">{empresas.alcgir} (2025)</p>
         </li>
       </ul>
     </section>
