@@ -14,3 +14,10 @@ http://localhost:5173/
 ```
 
 ![CV-andres-sebastian-ospina-guzman](./src/assets/img/image.png)
+> Primera versión del CV de Andrés Sebastián Ospina Guzmán.
+
+## Estructura del CV
+Se añadieron funciones dinamicas dentro del código, que permite que el CV se pueda actualizar de manera sencilla. La estructura del CV está organizada en componentes dinámicos, lo que facilita la utilización y el mantenimiento del mismo.
+
+![CV-andres-sebastian-ospina-guzman_-_actualizacion](./src/assets/img/image2.png)
+> Segunda versión del CV de Andrés Sebastián Ospina Guzmán.
