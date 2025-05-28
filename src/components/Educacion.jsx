@@ -36,7 +36,7 @@ export default function Educacion() {
     },
   ];
 
-  if (educacion === 0) {
+  if (educacion.length === 0) {
     return (
       <section>
         <h3>Educación</h3>
