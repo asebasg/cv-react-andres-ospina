@@ -112,7 +112,7 @@ export const experiencia = [
   },
 ];
 
-export const slackTecnologias = [
+export const stackTecnologias = [
   {
     id: 1,
     nombre: "React",

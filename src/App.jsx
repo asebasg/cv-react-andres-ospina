@@ -1,17 +1,33 @@
-import Cabecera from "./components/Cabecera.jsx";
-import Perfil from "./components/Perfil.jsx";
-import Educacion from "./components/Educacion.jsx";
-import Experiencia from "./components/Experiencia.jsx";
-import StackTecnologias from "./components/StackTecnologias.jsx";
+import React from "react";
+import {
+  cabecera,
+  perfil,
+  educacion,
+  experiencia,
+  stacktecnologias,
+  proyectos,
+  habilidades,
+} from "./data/cvData.js";
+
+import CabeceraCV from "./components/Cabecera";
+import Perfil from "./components/Perfil";
+import Educacion from "./components/Educacion";
+import Experiencia from "./components/Experiencia";
+import StackTecnologias from "./components/StackTecnologias";
+import Proyectos from "./components/Proyectos";
+import Habilidades from "./data/cvData.js";
 
 function App() {
   return (
-    <div>
-      <Cabecera />
-      <Perfil />
-      <Educacion />
-      <Experiencia />
-      <StackTecnologias />
+    <div style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>
+      {/*Cabecera*/}
+      <Cabecera nombre={cabecera.nombre} cargo={cabecera.cargo} />
+      <Perfil perfil={perfil.perfil} />
+      <Educacion estudios={educacion.titulo} />
+      <Experiencia trabajos={experiencia.cargo} />
+      <StackTecnologias tecnologias={stacktecnologias.nombre} />
+      <Proyectos proyectos={proyectos.nombre} />
+      <Habilidades habilidades={habilidades.nombre} />
     </div>
   );
 }
