@@ -1,10 +1,10 @@
-import "./Perfil.css"
+import React from "react";
 
-export default function Perfil({perfil}) {
+export default function Perfil({ texto }) {
   return (
     <section>
       <h3>Perfil</h3>
-      <p>{perfil}</p>
+      <p>{texto}</p>
       <hr />
     </section>
   );
