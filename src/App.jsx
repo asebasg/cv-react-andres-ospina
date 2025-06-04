@@ -4,30 +4,45 @@ import {
   perfil,
   educacion,
   experiencia,
-  stacktecnologias,
+  stackTecnologias,
   proyectos,
-  habilidades,
-} from "./data/cvData.js";
+  habilidades
+} from "./data/cvData";
 
-import CabeceraCV from "./components/Cabecera";
+import Cabecera from "./components/Cabecera";
 import Perfil from "./components/Perfil";
 import Educacion from "./components/Educacion";
 import Experiencia from "./components/Experiencia";
 import StackTecnologias from "./components/StackTecnologias";
 import Proyectos from "./components/Proyectos";
-import Habilidades from "./data/cvData.js";
+import Habilidades from "./components/Habilidades";
 
 function App() {
   return (
     <div style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>
-      {/*Cabecera*/}
-      <Cabecera nombre={cabecera.nombre} cargo={cabecera.cargo} />
-      <Perfil perfil={perfil.perfil} />
-      <Educacion estudios={educacion.titulo} />
-      <Experiencia trabajos={experiencia.cargo} />
-      <StackTecnologias tecnologias={stacktecnologias.nombre} />
-      <Proyectos proyectos={proyectos.nombre} />
-      <Habilidades habilidades={habilidades.nombre} />
+      {/* Cabecera */}
+      <CabeceraCV
+        nombre={cabecera.nombre}
+        profesion={cabecera.profesion}
+      />
+
+      {/* Perfil */}
+      <Perfil texto={perfil.texto} />
+
+      {/* Educación */}
+      <Educacion estudios={educacion} />
+
+      {/* Experiencia */}
+      <Experiencia trabajos={experiencia} />
+
+      {/* Stack de Tecnologías */}
+      <StackTecnologias tecnologias={stackTecnologias} />
+
+      {/* Proyectos (nuevo componente) */}
+      <Proyectos proyectos={proyectos} />
+
+      {/* Habilidades (nuevo componente) */}
+      <Habilidades habilidades={habilidades} />
     </div>
   );
 }
