@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function StackTecnologias({ tecnologias }) {
   const obtenerColor = (tipo) => {
     switch (tipo) {
@@ -11,6 +13,18 @@ export default function StackTecnologias({ tecnologias }) {
         return "gray";
     }
   };
+  
+  // si no hay tecnologias, mostrar mensaje
+  if (!tecnologias || tecnologias.length === 0) {
+    return (
+      <section>
+        <h3>Stack de Tecnologías</h3>
+        <p>No se han registrado tecnologías.</p>
+        <hr />
+      </section>
+    );
+  }
+
   return (
     <section>
       <h3>Stack de Tecnologías</h3>
