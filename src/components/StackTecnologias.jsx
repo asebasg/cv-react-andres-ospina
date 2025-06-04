@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function StackTecnologias({ tecnologias }) {
+  // Función para asignar colores según el tipo de tecnología
   const obtenerColor = (tipo) => {
     switch (tipo) {
       case "frontend":
@@ -13,8 +14,7 @@ export default function StackTecnologias({ tecnologias }) {
         return "gray";
     }
   };
-  
-  // si no hay tecnologias, mostrar mensaje
+
   if (!tecnologias || tecnologias.length === 0) {
     return (
       <section>
@@ -31,10 +31,11 @@ export default function StackTecnologias({ tecnologias }) {
       <ul>
         {tecnologias.map(({ id, nombre, tipo }) => (
           <li key={id} style={{ color: obtenerColor(tipo) }}>
-            <strong>{nombre}</strong>- {tipo}
+            {nombre} - <em>{tipo}</em>
           </li>
         ))}
       </ul>
+      <hr />
     </section>
   );
 }
