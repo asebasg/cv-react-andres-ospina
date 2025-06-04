@@ -1,12 +1,12 @@
-import "./Experiencia.css";
+import React from "react";
 
 export default function Experiencia({ trabajos }) {
-  // si no hay experiencia previa, mostrar mensaje
   if (!trabajos || trabajos.length === 0) {
     return (
       <section>
-        <h3>Experiencia laboral</h3>
-        <p>No se ha registrado experiencia laboral.</p>
+        <h3>Experiencia Profesional</h3>
+        <p>No se ha registrado experiencia profesional.</p>
+        <hr />
       </section>
     );
   }
@@ -15,13 +15,13 @@ export default function Experiencia({ trabajos }) {
     <section>
       <h3>Experiencia Profesional</h3>
       <ul>
-        {trabajos.map(({ id, cargo, empresa, periodo }) => (
+        {trabajos.map(({ id, puesto, empresa, periodo }) => (
           <li key={id}>
-            <strong>{cargo}</strong>- {empresa} ({periodo})
+            <strong>{puesto}</strong> - {empresa} ({periodo})
           </li>
         ))}
-        ;
       </ul>
+      <hr />
     </section>
   );
 }
