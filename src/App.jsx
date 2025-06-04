@@ -17,6 +17,11 @@ import StackTecnologias from "./components/StackTecnologias";
 import Proyectos from "./components/Proyectos";
 import Habilidades from "./components/Habilidades";
 
+import './components/Cabecera.css';
+import './components/Perfil.css';
+import './components/Educacion.css';
+import './components/Experiencia.css';
+
 function App() {
   return (
     <div style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>
