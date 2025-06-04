@@ -1,27 +1,4 @@
-export default function StackTecnologias() {
-  const tecnologias = [
-    {
-      id: 1,
-      nombre: "React",
-      tipo: "frontend",
-    },
-    {
-      id: 2,
-      nombre: "Node.js",
-      tipo: "backend",
-    },
-    {
-      id: 3,
-      nombre: "JavaScript",
-      tipo: "frontend",
-    },
-    {
-      id: 4,
-      nombre: "PostgreSQL",
-      tipo: "base de datos",
-    },
-  ];
-
+export default function StackTecnologias({ tecnologias }) {
   const obtenerColor = (tipo) => {
     switch (tipo) {
       case "frontend":
@@ -38,12 +15,12 @@ export default function StackTecnologias() {
     <section>
       <h3>Stack de Tecnologías</h3>
       <ul>
-        {tecnologias.map((tech) => (
-          <li key={tech.id} style={{ color: obtenerColor(tech.tipo) }}>
-            {tech.nombre} - <em>{tech.tipo}</em>
+        {tecnologias.map(({ id, nombre, tipo }) => (
+          <li key={id} style={{ color: obtenerColor(tipo) }}>
+            <strong>{nombre}</strong>- {tipo}
           </li>
         ))}
       </ul>
     </section>
-  )
+  );
 }
