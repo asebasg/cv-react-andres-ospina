@@ -171,3 +171,21 @@ export const habilidades = [
   { id: 3, nombre: "Resolución de Problemas", nivel: "Avanzado" },
   { id: 4, nombre: "Liderazgo", nivel: "Avanzado" },
 ];
+
+export const idioma = [
+    {
+        id: 1,
+        nombre: "Inglés",
+        nivel: "B2",
+    },
+    {
+        id: 2,
+        nombre: "Francés",
+        nivel: "A2",
+    },
+    {
+        id: 3,
+        nombre: "Noruego",
+        nivel: "A2",
+    }
+]

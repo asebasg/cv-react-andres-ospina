@@ -6,7 +6,8 @@ import {
   experiencia,
   stackTecnologias,
   proyectos,
-  habilidades
+  habilidades,
+  idioma
 } from "./data/cvData";
 
 import Cabecera from "./components/Cabecera";
@@ -16,6 +17,7 @@ import Experiencia from "./components/Experiencia";
 import StackTecnologias from "./components/StackTecnologias";
 import Proyectos from "./components/Proyectos";
 import Habilidades from "./components/Habilidades";
+import Idioma from "./components/Idioma";
 
 import './components/Cabecera.css';
 import './components/Perfil.css';
@@ -48,6 +50,9 @@ function App() {
 
       {/* Habilidades (nuevo componente) */}
       <Habilidades habilidades={habilidades} />
+
+      {/* Idioma (componente reto) */}
+      <Idioma idioma={idioma} />
     </div>
   );
 }
