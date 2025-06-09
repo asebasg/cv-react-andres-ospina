@@ -39,7 +39,7 @@ function App() {
       <Perfil texto={perfil.texto} />
       <Educacion estudios={educacion} />
       <Experiencia trabajos={experiencia} />
-      <StackTecnologias tecnologias={stackTecnologias} />
+      <StackTecnologias tecnologias={tecnologias} />
       <Proyectos proyectos={proyectos} />
       <Habilidades habilidades={habilidades} />
       <Idioma idioma={idioma} />
