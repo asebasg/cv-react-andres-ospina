@@ -4,10 +4,10 @@ import {
   perfil,
   educacion,
   experiencia,
-  stackTecnologias,
+  stackTecnologias as tecnologiasIniciales,
   proyectos,
   habilidades,
-  idioma
+  idioma,
 } from "./data/cvData";
 
 import Cabecera from "./components/Cabecera";
@@ -18,41 +18,36 @@ import StackTecnologias from "./components/StackTecnologias";
 import Proyectos from "./components/Proyectos";
 import Habilidades from "./components/Habilidades";
 import Idioma from "./components/Idioma";
+import ToggleHabilidades from "./components/ToggleHabilidades";
+import FormularioTecnologia from "./components/FormularioTecnologia";
 
-import './components/Cabecera.css';
-import './components/Perfil.css';
-import './components/Educacion.css';
-import './components/Experiencia.css';
+import "./components/Cabecera.css";
+import "./components/Perfil.css";
+import "./components/Educacion.css";
+import "./components/Experiencia.css";
 
 function App() {
+  const [tecnologias, setTecnologias] = useState(tecnologiasIniciales);
+
+  const agregarTecnologia = (nueva) => {
+    setTecnologias((prev) => [...prev, nueva]);
+  };
+
   return (
     <div style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>
-      {/* Cabecera */}
-      <Cabecera
-        nombre={cabecera.nombre}
-        profesion={cabecera.profesion}
-      />
-
-      {/* Perfil */}
+      <Cabecera nombre={cabecera.nombre} profesion={cabecera.profesion} />
       <Perfil texto={perfil.texto} />
-
-      {/* Educación */}
       <Educacion estudios={educacion} />
-
-      {/* Experiencia */}
       <Experiencia trabajos={experiencia} />
-
-      {/* Stack de Tecnologías */}
       <StackTecnologias tecnologias={stackTecnologias} />
-
-      {/* Proyectos (nuevo componente) */}
       <Proyectos proyectos={proyectos} />
-
-      {/* Habilidades (nuevo componente) */}
       <Habilidades habilidades={habilidades} />
-
-      {/* Idioma (componente reto) */}
       <Idioma idioma={idioma} />
+
+      {/* Componente con evento + estado */}
+      <FormularioTecnologia onAgregar={agregarTecnologia} />
+      {/* Componente con renderizado condicional */}
+      <ToggleHabilidades habilidades={habilidades} />
     </div>
   );
 }
